@@ -102,10 +102,4 @@ export const deleteTranscription = async (transcriptionId: string, env: Environm
   } else {
     await db.delete(transcription).where(eq(transcription.id, existingTranscription.id));
   }
-
-  // const results = await env.VECTORIZE.query(queryVector, {
-  //   topK: 10,
-  //   returnMetadata: "all",
-  //   filter: { transcriptionId: transcriptionId },
-  // });
 };
